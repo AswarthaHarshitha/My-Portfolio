@@ -1,0 +1,335 @@
+:root {
+    --primary-color: #605862b7;
+    --secondary-color: #ffd700;
+    --font-family: 'Poppins', sans-serif;
+    --transition-duration: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: #333;
+    background-image: url('redbg.jpg');
+    background-color: #605862b7;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: perspective(1000px) rotateX(5deg);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.navigation {
+    margin-top: 1rem;
+}
+
+.navigation a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1.2rem;
+    transition: color var(--transition-duration);
+}
+
+.navigation a:hover {
+    color: #ddd;
+}
+
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background: url('bgimg.jpeg') no-repeat center center/cover;
+    color: var(--secondary-color);
+    text-align: center;
+    perspective: 1000px;
+}
+
+.home .content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    transform: rotateX(10deg);
+}
+
+.home h2 span {
+    color: #fff;
+}
+
+.btn-group a {
+    display: inline-block;
+    padding: 0.8rem 1.2rem;
+    color: var(--secondary-color);
+    background: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background var(--transition-duration), transform var(--transition-duration);
+    margin-top: 1rem;
+}
+
+.btn-group a:hover {
+    color: #fff;
+    background: #ffd700;
+    transform: translateY(-3px);
+}
+
+.about .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    perspective: 1000px;
+    position: relative;
+}
+
+.about .content p {
+    flex: 1;
+    margin-right: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: rotateY(-5deg);
+}
+
+.about .content::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 5px solid;
+    border-image-source: url('bgimg.jpeg');
+    border-image-slice: 30;
+    filter: brightness(1.5) blur(5px);
+    z-index: -1;
+    transition: transform var(--transition-duration);
+}
+
+.about .content:hover::before {
+    transform: scale(1.05);
+}
+
+.about .HarshithaDP {
+    flex: 1;
+}
+
+.about .HarshithaDP img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.education, .skills, .certifications, .project {
+    padding: 2rem;
+    background: url('bgimg.jpeg') no-repeat center center/cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.education h2, .skills h2, .certifications h2, .project h2 {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.education .year, .project .project-item, .skills .skill-list div, .certifications .cert-list div {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    border-radius: 10px;
+    transition: transform var(--transition-duration), box-shadow var(--transition-duration);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.education .year:hover, .project .project-item:hover, .skills .skill-list div:hover, .certifications .cert-list div:hover {
+    transform: scale(1.05) translateZ(10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project .project-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.contact .head {
+    background: transparent;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1.5rem;
+    transform: rotateX(2deg);
+    position: relative;
+}
+
+form::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border: 5px solid;
+    border-image-source: url('bgimg.jpeg');
+    border-image-slice: 30;
+    filter: brightness(1.5) blur(5px);
+    z-index: -1;
+    transition: transform var(--transition-duration);
+}
+
+form:hover::before {
+    transform: scale(1.05);
+}
+
+form label {
+    margin: 0.5rem 0;
+}
+
+form input, form textarea {
+    padding: 0.5rem;
+    border: 1px solid #ffd700;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    transition: box-shadow var(--transition-duration);
+}
+
+form input:focus, form textarea:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+form button {
+    padding: 0.8rem;
+    border: none;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background var(--transition-duration), transform var(--transition-duration);
+}
+
+form button:hover {
+    background: #ffd700;
+    transform: translateY(-2px);
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 0.4rem;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    transition: transform var(--transition-duration), color var(--transition-duration);
+}
+
+.social-icons a:hover {
+    transform: scale(1.2) translateZ(5px);
+    color: #ffd700; 
+}
+
+.social-icons img {
+    width: 20px;  /* Smaller size for the images */
+    height: 20px;
+    transition: transform var(--transition-duration);
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* Gap Between Skills and Certifications Sections */
+.skills {
+    margin-bottom: 2rem; /* Adjust this value as needed */
+}
+
+.certifications {
+    margin-top: 2rem; /* Adjust this value as needed */
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .navigation a {
+        font-size: 1rem;
+        margin: 0 0.5rem;
+    }
+
+    .home h2 {
+        font-size: 1.8rem;
+    }
+
+    .home h3, .home h4 {
+        font-size: 1.2rem;
+    }
+
+    .home .content {
+        padding: 1rem;
+    }
+
+    .about .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about .content p {
+        margin-right: 0;
+    }
+
+    form {
+        padding: 1rem;
+    }
+}
